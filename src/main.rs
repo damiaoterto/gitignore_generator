@@ -49,7 +49,7 @@ fn main() {
 
     create_file(
         cli_args.filename,
-        templates_content.lock().unwrap().join("\n"),
+        templates_content.lock().unwrap().join("\n\n"),
     )
     .unwrap();
 }
