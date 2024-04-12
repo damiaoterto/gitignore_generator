@@ -10,6 +10,7 @@ use std::{
 };
 
 const BASE_URL: &str = "https://www.toptal.com";
+
 /// A simple cli for .gitignore generator
 #[derive(Debug, Parser)]
 struct Args {
@@ -29,7 +30,7 @@ fn main() {
 
     println!("Getting templates...");
 
-    for tpl in cli_args.template.split(",") {
+    for tpl in cli_args.template.split(',') {
         let template = String::from(tpl);
         let templates_content = Arc::clone(&templates_content);
 
