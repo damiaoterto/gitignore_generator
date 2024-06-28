@@ -82,6 +82,8 @@ fn create_file(filename: String, content: String) -> Result<(), &'static str> {
         }
     }
 
+    write_file(cwd, content)?;
+
     Ok(())
 }
 
